@@ -75,9 +75,10 @@ body {
     border-bottom: 3px solid var(--color-primary);
 }
 
-.banner {
+/* .banner {
     height: 100vh;
-}
+} */
+
 .banner .container {
     display: flex;
     align-items: center;
@@ -93,7 +94,7 @@ body {
 .banner-text {
     margin: 20px 0 0 38px;
 }
-.btn-banner {
+.btn_banner  {
     padding: 22px 155px;
     border-radius: var(--btn-border-radius);
     background-color: var(--color-primary);
@@ -107,3 +108,70 @@ body {
     width: 100%;
     height: auto;
 }
+section.informations {
+    margin-top: 100px;
+     }
+
+.informations_title {
+    text-align: center;
+    font-family: var(--font-raleway);
+    font-size: 2.25rem;
+}
+.informations_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*max-width: 800px;
+    max-width: 1; */
+}
+.informations_first,
+.informations_second,
+.informations_third {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    font-family: var(--font-raleway);
+    justify-content: flex-start;
+    max-width: 160px;
+    text-align: center;
+}
+.informations_first:first-child .circle {
+    background-color: var(--color-redish);
+}
+
+.informations_second:nth-child(2) .circle {
+    background-color: var(--color-primary);
+}
+
+.informations_third:nth-child(3) .circle {
+    background-color: var(--color-green);
+}
+
+.informations_first .circle,
+.informations_second .circle,
+.informations_third .circle {
+    border-radius: 50%;
+    height: 63px;
+    width: 63px;
+    position: relative;
+}
+.informations_first .informations_img,
+.informations_second .informations_img,
+.informations_third .informations_img {
+    left: 45%;
+    top: 0;
+    position: absolute;
+    vertical-align: middle;
+}
+.informations_number {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: .1875rem;
+    margin-top: 15px;
+}
+.informations_description {
+    color: var(--color-grey);
+    margin-top: 19px;
+}
+
