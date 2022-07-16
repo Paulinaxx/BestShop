@@ -121,8 +121,7 @@ section.informations {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*max-width: 800px;
-    max-width: 1; */
+    max-width: 800px;
 }
 .informations_first,
 .informations_second,
@@ -174,4 +173,148 @@ section.informations {
     color: var(--color-grey);
     margin-top: 19px;
 }
+.benefits {
+    background-color: var(--color-light-grey);
+    padding: 100px 0;
+}
+ .benefits_container {
+     padding: 0 100px;
+ }
+
+.benefits_box {
+    background-color: var(--color-white);
+    border: 1px solid #e8e9ed;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 38px;
+}
+h2.benefits_title {
+    font-family: var(--font-raleway);
+    font-size: 2.25rem;
+}
+.benefits_description {
+    line-height: 1.375rem;
+    margin-top: 30px;
+}
+.benefits_text {
+   /* box-sizing: content-box; */
+    margin: 90px 36px;
+    max-width: 415px;
+}
+.benefits_text:after {
+    background-color: var(--color-redish);
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 50px;
+    width: 332px;
+}
+
+.benefits_description{
+    line-height: 1.375rem;
+    margin-top: 30px;
+}
+.benefits_image {
+    position: relative;
+}
+.benefits_image img {
+    position: relative;
+    z-index: 2;
+}
+.benefits_box_computer {
+    --accent-color: var(--color-redish);
+}
+
+.benefits_box_computer .benefits_image {
+    margin-bottom: 38px;
+    margin-right: 117px;
+   /* position: relative; nope*/
+}
+.benefits_box_computer .benefits_image:before {
+
+     content: "";
+     width: 180px;
+     height: 180px;
+     display: block;
+     position: absolute;
+     background-color: var(--accent-color);
+     border-radius: 40px;
+     right: 0;
+     top: -40px;
+     transform: rotate(45deg);
+ }
+.benefits_box_computer .benefits_image img {
+    width: 386px;
+    height: auto;
+}
+
+.benefits_box_smartphone {
+    --accent-color: var(--color-primary);
+    flex-direction: row-reverse;
+    padding: 0 20px 0 70px;
+}
+
+.benefits_box_smartphone .benefits_image:before {
+    content: "";
+    display: block;
+    width: 310px;
+    height: 320px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -20px;
+}
+
+.benefits_box_smartphone .benefits_image img  {
+    height: auto;
+    width: 426px;
+}
+
+.benefits_box_smartphone .benefits_text {
+    margin: 70px 0;
+}
+.benefits_box_smartphone .benefits_description{
+    line-height: 1.375rem;
+    margin-top: 30px;
+}
+
+
+.benefits_box_other {
+    display: flex;
+    accent-color: var(--color-green);
+}
+.benefits_box_other>div {
+    margin-bottom: 0;
+}
+.benefits_box .benefits_box_other {
+    max-width: 620px;
+}
+
+.benefits_box_other .benefits_text {
+    margin: 70px 35px;
+    max-width: none;
+    /*box-sizing: content-box; nope */
+}
+
+.benefits_box_image {
+    flex-grow: 1;
+    background-color: var(--color-green);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+}
+.benefits_box_image img {
+    width: 295px;
+    height: auto;
+    margin-top: 55px;
+}
+
+
+
+
 
