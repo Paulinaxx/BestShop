@@ -11,15 +11,25 @@
     /* fonts */
     --font-raleway: Raleway, sans-serif;
     --font-open-sans: Open Sans, sans-serif;
-    /* btn */
     --btn-border-radius: 35px;
 }
+
 * {
     box-sizing: border-box;
 }
 body {
     font-family: var(--font-open-sans);
     line-height: 1;
+}
+.btn {
+    border-radius: 35px;
+    border: none;
+    display: inline-block;
+    font-weight: 700;
+    padding: 16px 65px;
+    text-decoration: none;
+    font-family: var(--font-raleway);
+    color: white;
 }
 
 .container {
@@ -94,7 +104,7 @@ body {
 .banner-text {
     margin: 20px 0 0 38px;
 }
-.btn_banner  {
+.btn_banner {
     padding: 22px 155px;
     border-radius: var(--btn-border-radius);
     background-color: var(--color-primary);
@@ -314,7 +324,117 @@ h2.benefits_title {
     margin-top: 55px;
 }
 
+.pricing {
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.pricing_boxes {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pricing_box {
+    width: 370px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-redish);
+    border-radius: 18px;
+}
 
+.pricing_details {
+    margin-bottom: 60px;
+    margin-top: 34px;
+    text-align: center;
+}
+.pricing-name {
+    font-family: var(--font-raleway);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+.pricing-price {
+    margin-top: 25px;
+    font-size: 2.875rem;
+    font-family: var(--font-open-sans);
+    font-weight: 300;
+    color: var(--color-redish);
+}
+.pricing_items {
+    text-align: center;
+}
+.pricing_item,
+.pricing_item_red {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.pricing_item::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    margin-right: 10px;
+    background-image: url("../images/images/Checkmark-1.svg");
+}
+.pricing_item_red::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    margin-right: 10px;
+    background-image: url("../images/images/Close.svg");
+}
 
+.pricing_box .btn {
+    background-color: var(--color-redish);
+    bottom: -25px;
+    font-size: .8125rem;
+    position: relative;
+}
+.pricing_box_professional {
+    --accent-color: var(--color-primary);
+    width: 400px;
+    margin: 0 40px;
+    box-shadow: 5px 1px 27px var(--color-primary-shadow);
+}
 
+.pricing_box_professional {
+    width: 370px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-primary);
+    border-radius: 18px;
+}
+.pricing_box_professional .pricing-price {
+    color: var(--color-primary);
+}
+
+.pricing_limited {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.75rem;
+    font-family: var(--font-raleway);
+    font-weight: 700;
+}
+.pricing_box .btn_pricing_box_professional{
+    background-color: var(--color-primary);
+}
+.pricing_box_premium {
+    width: 370px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-green);
+    border-radius: 18px;
+}
+.pricing_box_premium .pricing-price {
+    color: var(--color-green);
+}
+.pricing_box .btn_pricing_box_premium {
+    background-color: var(--color-green);
+}
