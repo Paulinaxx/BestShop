@@ -30,6 +30,7 @@ body {
     text-decoration: none;
     font-family: var(--font-raleway);
     color: white;
+    background-color: var(--color-primary);
 }
 
 .container {
@@ -46,16 +47,18 @@ body {
 .header .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 
-.header .logo {
+.header.logo {
     display: flex;
     align-self: center;
     text-decoration: none;
-    font-family: var(--font-open-sans);
+    font-family: var(--font-raleway);
     color: var(--color-primary);
     font-weight: 300;
-    font-size: 35px;
+    font-size: 2rem;
 }
 .page-nav-list {
     display: flex;
@@ -99,13 +102,18 @@ body {
 .banner-title {
     font-family: var(--font-raleway);
     font-size: 3.0625rem;
-    vertical-align: baseline;
 }
 .banner-text {
     margin: 20px 0 0 38px;
 }
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
 .btn_banner {
     padding: 22px 155px;
+    display: inline-block;
     border-radius: var(--btn-border-radius);
     background-color: var(--color-primary);
     box-shadow: 3px 10px 14px var(--color-primary-shadow);
@@ -114,46 +122,45 @@ body {
     text-decoration: none;
     margin-top: 30px;
 }
-.banner img {
-    width: 100%;
-    height: auto;
-}
-section.informations {
-    margin-top: 100px;
-     }
 
-.informations_title {
+.informations {
+    margin-top: 100px;
+}
+
+.informations_container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 100px auto 120px;
+}
+
+h2 {
     text-align: center;
     font-family: var(--font-raleway);
     font-size: 2.25rem;
 }
-.informations_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-}
+
 .informations_first,
 .informations_second,
 .informations_third {
-    align-items: center;
     display: flex;
     flex-direction: column;
     margin-top: 70px;
     font-family: var(--font-raleway);
     justify-content: flex-start;
+    align-items: center;
     max-width: 160px;
     text-align: center;
 }
-.informations_first:first-child .circle {
+.informations_first .circle {
     background-color: var(--color-redish);
 }
 
-.informations_second:nth-child(2) .circle {
+.informations_second .circle {
     background-color: var(--color-primary);
 }
 
-.informations_third:nth-child(3) .circle {
+.informations_third .circle {
     background-color: var(--color-green);
 }
 
@@ -177,12 +184,13 @@ section.informations {
     font-size: 1.25rem;
     font-weight: 800;
     letter-spacing: .1875rem;
-    margin-top: 15px;
+    margin-top: 13px;
 }
 .informations_description {
     color: var(--color-grey);
     margin-top: 19px;
 }
+
 .benefits {
     background-color: var(--color-light-grey);
     padding: 100px 0;
@@ -196,10 +204,25 @@ section.informations {
     border: 1px solid #e8e9ed;
     border-radius: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 38px;
+    margin-bottom: 37px;
+    border-radius: 5px;
 }
+
+.benefits_text {
+    margin: 90px 36px;
+    max-width: 415px;
+}
+.benefits_text::after {
+    content: "";
+    width: 332px;
+    height: 4px;
+    background-color: var(--accent-color);
+    display: block;
+    margin-top: 50px;
+}
+
 h2.benefits_title {
     font-family: var(--font-raleway);
     font-size: 2.25rem;
@@ -207,19 +230,6 @@ h2.benefits_title {
 .benefits_description {
     line-height: 1.375rem;
     margin-top: 30px;
-}
-.benefits_text {
-   /* box-sizing: content-box; */
-    margin: 90px 36px;
-    max-width: 415px;
-}
-.benefits_text:after {
-    background-color: var(--color-redish);
-    content: "";
-    display: block;
-    height: 4px;
-    margin-top: 50px;
-    width: 332px;
 }
 
 .benefits_description{
@@ -268,8 +278,8 @@ h2.benefits_title {
 
 .benefits_box_smartphone .benefits_image:before {
     content: "";
-    display: block;
-    width: 310px;
+    /* display: block; */
+    width: 320px;
     height: 320px;
     background-color: var(--color-primary);
     border-radius: 50%;
@@ -286,17 +296,16 @@ h2.benefits_title {
 .benefits_box_smartphone .benefits_text {
     margin: 70px 0;
 }
-.benefits_box_smartphone .benefits_description{
+.benefits_box_smartphone .benefits_description {
     line-height: 1.375rem;
     margin-top: 30px;
 }
-
 
 .benefits_box_other {
     display: flex;
     accent-color: var(--color-green);
 }
-.benefits_box_other>div {
+.benefits_box_other > div {
     margin-bottom: 0;
 }
 .benefits_box .benefits_box_other {
@@ -452,14 +461,15 @@ h2.benefits_title {
 }
 
 .title {
-    font-size: 3rem;
-    line-height: 3rem;
-    font-family: var(--font-raleway);
+    font-size: 3.0625rem;
+    line-height: 3.6875rem;
+    text-align: start;
+   /* font-family: var(--font-raleway); */
 }
 .description {
     font-size: 1rem;
     line-height: 1.3rem;
-    margin: 22px 0 40px;
+    margin: 22px 0 42px;
 }
 .contact_info {
     display: flex;
@@ -468,19 +478,16 @@ h2.benefits_title {
     color: var(--color-grey);
 }
 
-.contact_email {
-    color: var(--color-grey);
-    text-decoration: none;
-    font-weight: 500;
-    margin-right: 20px;
-}
-.contact_info img {
-    margin-right: 10px;
-}
+.contact_email,
 .contact_number {
     color: var(--color-grey);
     text-decoration: none;
     font-weight: 500;
+   /* margin-right: 20px; */
+}
+
+.contact_info img {
+    margin-right: 10px;
 }
 
 .form_details {
@@ -490,19 +497,25 @@ form {
     display: flex;
     flex-direction: column;
 }
-/* .form_fields_name:first-of-type {
+.form_field {
+    display: flex;
+    flex-direction: column;
+}
+
+ .form_field:first-of-type {
     margin-bottom: 42px;
-} */
+}
+
 .form_fields_name {
     display: flex;
     flex-direction: column;
 }
 .form_label {
     color: var(--color-primary);
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 0.6875rem;
+    font-weight: bold;
     letter-spacing: 3px;
-    line-height: 1rem;
+    line-height: 0.9rem;
     text-transform: uppercase;
 }
 .form_input_name,
@@ -510,10 +523,10 @@ form {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid var(--color-grey);
-    line-height: 2rem;
+    line-height: 2.625rem;
 }
 .form_box {
-    margin-top: 33px;
+    margin-top: 30px;
 }
 .checkbox_label {
     cursor: pointer;
@@ -540,6 +553,13 @@ form {
     top: 0;
     position: absolute;
 }
+.checkbox_label input:checked ~ .checkbox {
+    background-image: url(../images/images/Checkmark-1.svg);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
 .checkbox_label .checkbox_text {
     color: var(--color-grey);
     font-size: 1rem;
@@ -552,12 +572,18 @@ form {
     margin-top: 20px;
     padding: 20px 97px;
 }
-.btn_form .btn {
+   /*background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--btn-border-radius);
+    box-shadow: 3px 10px 14px var(--color-primary-shadow;
+} */
+.btn .btn-form {
     background-color: var(--color-primary);
     color: white;
     border-radius: var(--btn-border-radius);
-    box-shadow: 3px 10px 14px var(--color-primary-shadow)
+    /*box-shadow: 3px 10px 14px var(--color-primary-shadow);*/
 }
+
 .footer {
     box-shadow: 0 -5px 40px #00000029;
     padding: 20px 0;
@@ -570,7 +596,7 @@ form {
 .footer_information{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .logo {
     text-decoration: none;
@@ -587,5 +613,4 @@ form {
 }
 .footer_social_media {
     margin-right: 20px;
-    text-decoration: none;
 }
